@@ -1,0 +1,13 @@
+GET /uaEJYXlVvfhUHmXnOZ6Yvw/1691666647/lqdc4c9ba4e85b8708c91d5eb51196a558.mp4 HTTP/2
+Host: vwaw766.cda.pl
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
+Accept: video/webm,video/ogg,video/*;q=0.9,application/ogg;q=0.7,audio/*;q=0.6,*/*;q=0.5
+Accept-Language: pl,en-US;q=0.7,en;q=0.3
+Referer: https://www.cda.pl/video/13731389dc
+Range: bytes=0-
+Connection: keep-alive
+Cookie: pskey=4Uej3GaT2uB7knJ7HLUYSvSY7abaUZx8TdS7yo41Q8U%3D; psiv=gL95uxc72EszPTGO2An%2Bgg%3D%3D; psts=1671650143; psct=1671650143; psvk=03040829b9aae957df2812bbb5c5e3d39fa412eed362a211512510bd0d6d1a64; psdat=RFhTQTFYaGNRd2FrZHhLd1lKWHd3Q1pSbDloeU5DN0dJZ0VxYUpIWVpuVU92STVwK0xXK2xYa0dTWUhNQUx6Q3crTERkUGtrWFpYMExsQndOb0VaUkZpRVB0TGlpc0lPRWlDTG03cW4zNEl2R3NnVXl0OWlNMlVUT2w0T2ZtcjhQZ0haNW1yQWthcDZJZmlZV214bDNyeUlxUHg1blZkdUxVTlpzbkUrZVZ4ZjFBbGtjalk5WG8zQk5mNEpBSHpQU2lKQ0svNGJ6WGNiZkUzSkdXUXVKL2g4ZkFxRXBibWxnWjRkQlNOd1lsY0gwV1VJaWdrWW1lNWpWWmlxb1htcVZYR0Vkd0Z5eU1FcDZVTTFZekxuN1BSTThIcXZEY2txbHg1R2EzL283aTBSZWRlcmpabUZLM3lncmUrSWpsZXF3dTVsbUErMnAzcm0rOUphdDhhQkZJb3R1UWZranhWYUxKT3g3dm0vVzFEdUZXT3lqakM3YSs0bWFzQTBhNUdENGVYVGI1TjVvRy9pc1RMd0dxY3VrNHcwZlRncE83TStWREVhQmM1bnFxeWxoNFd5QStSNjRVbjBSZ3UzMGwwWjhWdHRSZkVzRkZnS1dOVmFVbnRPU25HYVJ2c3Z1dlZTSEhnTytmMTRMQ2kzaFJGSFUxMjI0ZHgxV0VyUU1Vb2krYndvOUhJa01jTFFBWVh0bXdlWUVTWFh1M05wSExKdlBMVE12NzhUVXJ5cldJbjZuVjVNb1B2YkxtWlN5eHgyV1o2WnBPOWVBemJEU05LbExXajdJQWgwSmFsWHhFZUozRStjazYvTnFtRndLQ0ZRVnUxZ1lNNFB4QWcwaTc5MA%3D%3D; cda.player=html5; flash_version=Shockwave Flash 32.0 r0; flash=1; __fr=1; cdaSC=b4aec4eec8e26578e4a293f73073a19f; cdaSCP=86b8d10fb7; cda_g=m; cda_a=18; PHPSESSID=59913bd76c6c7f4ad1c9237ab4275ffe6f97c3dd; fb_px=u; cda_search_query=kac+vegas; __92c5d5f7e40f4287a0aa5343cc3c59c4=1; __1ff8ffe73749171e6ff6bd99f3af09d3=1; vasty=2; __834cbf12ea03081d20c2e73c4e3d880c=1; __f5c111485755e9359b41036f395b7a7d=1; __f5c111485755e9359b41036f395b7a7d2=1
+Sec-Fetch-Dest: video
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-site
+Accept-Encoding: identity

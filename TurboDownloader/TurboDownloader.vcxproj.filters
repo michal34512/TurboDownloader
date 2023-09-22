@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki źródłowe">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Download">
+      <UniqueIdentifier>{45c30ad6-eef8-4087-bdb6-858c5d998ae6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Download">
+      <UniqueIdentifier>{9bfa3f98-8beb-4e39-a2c4-2d64ca86d4cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Additional Tools">
+      <UniqueIdentifier>{008b10f1-4bfb-49d1-9d2e-ca110bdeeec8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Additional Tools">
+      <UniqueIdentifier>{4d557cb3-a203-432b-92a7-824e4acd96e7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Start.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Download.h">
+      <Filter>Pliki nagłówkowe\Download</Filter>
+    </ClInclude>
+    <ClInclude Include="MP4.h">
+      <Filter>Pliki nagłówkowe\Download</Filter>
+    </ClInclude>
+    <ClInclude Include="LogReporter.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="GetHeader.h">
+      <Filter>Pliki nagłówkowe\Download</Filter>
+    </ClInclude>
+    <ClInclude Include="Merger.h">
+      <Filter>Pliki nagłówkowe\Download</Filter>
+    </ClInclude>
+    <ClInclude Include="DownloadFactory.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="MP2T.h">
+      <Filter>Pliki nagłówkowe\Download</Filter>
+    </ClInclude>
+    <ClInclude Include="FFMpeg.h">
+      <Filter>Pliki nagłówkowe\Additional Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="FileFetcher.h">
+      <Filter>Pliki nagłówkowe\Additional Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="FilePathOperations.h">
+      <Filter>Pliki nagłówkowe\Additional Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="StringOperations.h">
+      <Filter>Pliki nagłówkowe\Additional Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Sagum2.rc">
+      <Filter>Pliki zasobów</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Start.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="MP4.cpp">
+      <Filter>Pliki źródłowe\Download</Filter>
+    </ClCompile>
+    <ClCompile Include="LogReporter.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="GetHeader.cpp">
+      <Filter>Pliki źródłowe\Download</Filter>
+    </ClCompile>
+    <ClCompile Include="Merger.cpp">
+      <Filter>Pliki źródłowe\Download</Filter>
+    </ClCompile>
+    <ClCompile Include="DownloadFactory.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="MP2T.cpp">
+      <Filter>Pliki źródłowe\Download</Filter>
+    </ClCompile>
+    <ClCompile Include="FFMpeg.cpp">
+      <Filter>Pliki źródłowe\Additional Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="FileFetcher.cpp">
+      <Filter>Pliki źródłowe\Additional Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="FilePathOperations.cpp">
+      <Filter>Pliki źródłowe\Additional Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="StringOperations.cpp">
+      <Filter>Pliki źródłowe\Additional Tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
