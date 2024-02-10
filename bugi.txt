@@ -1,0 +1,13 @@
+1. uruchomić pobieranie 30 transferów równocześnie z serwisu który blokuje więcej niz 3 transfery równoczeńcie (vtube)
+
+2. zmienic liczbę równoczesnych transferów na 3 i uruchomić ponownie
+
+----------------------------
+1. Na początku pobierać .mp4 i w połowie przerwać pobieraniem MP2T
+2. Po pobraniu output nie zawiera całego nagrania (tylko np pierwsze 1 min)
+
+---------------------------
+1. Czasami przy pobieraniu MP2T plik1.mp4 pobiera się w nieskończonosć
+2. po restarcie output.mp4 wcale się nie tworzy
+---------------------------
+Zrobić, żeby przy wklejaniu linków automatycznie usuwało znaki białe
