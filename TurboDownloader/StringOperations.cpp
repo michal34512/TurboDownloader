@@ -1,6 +1,7 @@
 #include "StringOperations.h"
 #include <codecvt>
 #include <windows.h>
+#include <cwctype>
 
 namespace AdditionalTools
 {
@@ -19,4 +20,14 @@ namespace AdditionalTools
 		MultiByteToWideChar(CP_UTF8, 0, &str[0], (int)str.size(), &wstrTo[0], size_needed);
 		return wstrTo;
 	}
+	std::string StringOperations::remove_whitespace_characters(std::string& str) {
+		str.erase(std::remove_if(str.begin(), str.end(), [](unsigned char x) { return (std::isspace(x)); }), str.end());
+		return str;
+	}
+
+	std::wstring StringOperations::remove_whitespace_characters(std::wstring& wstr) {
+		wstr.erase(std::remove_if(wstr.begin(), wstr.end(), [](wchar_t x) { return std::iswspace(x); }), wstr.end());
+		return wstr;
+	}
+
 }

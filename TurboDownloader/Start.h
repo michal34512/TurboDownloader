@@ -152,7 +152,10 @@ namespace TurboDownloader {
 			// 
 			// URLTextbox
 			// 
+			this->URLTextbox->AcceptsReturn = true;
+			this->URLTextbox->AcceptsTab = true;
 			this->URLTextbox->Location = System::Drawing::Point(12, 37);
+			this->URLTextbox->Multiline = true;
 			this->URLTextbox->Name = L"URLTextbox";
 			this->URLTextbox->Size = System::Drawing::Size(550, 20);
 			this->URLTextbox->TabIndex = 0;

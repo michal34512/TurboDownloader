@@ -207,6 +207,8 @@ namespace TurboDownloader {
 		{
 			String^ textBoxText = textBox->Text->ToString();
 			Download::DownloadFactory::arguments.URL = msclr::interop::marshal_as<std::string>(textBoxText);
+			StringOperations::remove_whitespace_characters(Download::DownloadFactory::arguments.URL);
+			textBox->Text = msclr::interop::marshal_as<String^>(Download::DownloadFactory::arguments.URL);
 		}
 	}
 	System::Void Start::submitButton_Click(System::Object^ sender, System::EventArgs^ e)
