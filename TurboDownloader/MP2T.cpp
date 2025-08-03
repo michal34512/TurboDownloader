@@ -29,7 +29,7 @@ namespace Download
 	}
 	size_t MP2T::GetSegCountURLWriteFunc(char* ptr, size_t size, size_t nmemb, unsigned int* out)
 	{
-		std::string data = ptr;
+		std::string data(ptr, nmemb);
 		std::cout << data << std::endl << std::endl << std::endl;
 		if (data.rfind("#EXT-X-ENDLIST") == std::string::npos) return size * nmemb;
 		if (data.rfind("\x0a") == std::string::npos) return size * nmemb;
@@ -68,6 +68,7 @@ namespace Download
 			curl_easy_setopt(curl, CURLOPT_FTP_SKIP_PASV_IP, 1L);
 			curl_easy_setopt(curl, CURLOPT_TCP_KEEPALIVE, 1L);
 			curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false);//certificate fix
+			curl_easy_setopt(curl, CURLOPT_ACCEPT_ENCODING, "");
 			if (arguments.CookieFilePath.size() > 0)
 				curl_easy_setopt(curl, CURLOPT_COOKIEFILE, arguments.CookieFilePath);
 			if (arguments.InputHeaderFilePath.size() > 0)

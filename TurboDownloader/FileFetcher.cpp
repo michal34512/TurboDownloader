@@ -13,30 +13,61 @@ namespace AdditionalTools
 		}
 		return _string;
 	}
+
+	std::string lowerCaseString(const std::string& input)
+	{
+		std::string result = input;
+		std::transform(result.begin(), result.end(), result.begin(),
+			[](unsigned char c) { return std::tolower(c); });
+		return result;
+	}
+
+	void FormatRangeHeader(std::string& line, unsigned long long downRange, unsigned long long upRange)
+	{
+		std::string lower = lowerCaseString(line);
+		if (lower.find("range") != std::string::npos && !(downRange == 0 && upRange == 0)) {
+			std::string prefix = line.substr(0, line.find(":") + 1);
+			line = prefix + " bytes=" + std::to_string(downRange) + "-" + std::to_string(upRange);
+		}
+	}
+
+	void RemoveAcceptEncoding(std::string& line)
+	{
+		std::string lower = lowerCaseString(line);
+		if (lower.find("accept-encoding") != std::string::npos) {
+			line = "";
+		}
+	}
+
+	curl_slist* PrepareHeaders(std::fstream& inFile, unsigned long long downRange, unsigned long long upRange)
+	{
+		struct curl_slist* chunk = NULL;
+		std::string line;
+
+		while (std::getline(inFile, line)) {
+			RemoveAcceptEncoding(line);
+			if (line.empty()) continue;
+			FormatRangeHeader(line, downRange, upRange);
+			
+
+			chunk = curl_slist_append(chunk, line.c_str());
+		}
+
+		return chunk;
+	}
+
 	void FileFetcher::GetHeadersFromFile(CURL* _cHandle, std::wstring _HeaderFilePath, unsigned long long _DownRange, unsigned long long _UpRange)
 	{
-		std::string line;
 		std::fstream InHeaderFile;
 		InHeaderFile.open(_HeaderFilePath, std::ios::in | std::ios::binary);
 		if (!InHeaderFile.good()) {
 			return;
 		}
-		struct curl_slist* chunk = NULL;
-		while (!InHeaderFile.eof())
-		{
-			getline(InHeaderFile, line);
-			std::string lowerCaseLine = lowerCaseString(line);
-			if (lowerCaseLine.find("range") == std::string::npos||(_DownRange == 0 && _UpRange == 0)) {
-				chunk = curl_slist_append(chunk, line.c_str());
-				continue;
-			}
-			std::string modifiedHeader = line.substr(0, line.find(":") + 1);
-			modifiedHeader += " bytes=" + std::to_string(_DownRange) + "-" + std::to_string(_UpRange);
-			chunk = curl_slist_append(chunk, modifiedHeader.c_str());
-		}
-		
+
+		struct curl_slist* chunk = PrepareHeaders(InHeaderFile, _DownRange, _UpRange);
 		curl_easy_setopt(_cHandle, CURLOPT_HTTPHEADER, chunk);
 	}
+
 	void FileFetcher::TemporaryFileCleanup(Download::DownloadArgs& _arguments)
 	{
 		const std::wstring targetPattern = _arguments.Prefix;
