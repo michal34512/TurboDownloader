@@ -15,6 +15,11 @@ namespace Download
 	{
 		LogReporter::Log("Starting transfer...");
 		GetHeader::GetTransferInfo(arguments);
+		if (GetHeader::FileType == nullptr)
+		{
+			LogReporter::Error("Error: FileType is null. Cannot determine file format.");
+			return;
+		}
 		if (strstr(GetHeader::FileType, "MP2T") != nullptr)
 		{
 			createdDownload = new MP2T();

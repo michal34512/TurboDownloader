@@ -24,6 +24,15 @@ namespace AdditionalTools {
         }
         return _path;
     }
+    std::wstring FilePathOperations::GetAbsuluteFilePath(const std::wstring& _path) {
+        if (_path.length() >= 2 && _path[1] == L':' &&
+            ((_path[2] == L'\\') || (_path[2] == L'/')))
+        {
+            return _path;
+        }
+
+        return FilePathOperations::exeDir + L"\\" + _path;
+    }
     std::vector<std::wstring> FilePathOperations::GetFilesStartingWithPrefix(const std::wstring& _directory, const std::wstring& _prefix)
     {
        std::vector<std::wstring> matchingFiles;

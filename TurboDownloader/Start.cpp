@@ -114,7 +114,7 @@ namespace TurboDownloader {
 			String^ selectedItemText = comboBox->SelectedItem->ToString();
 			this->headerTextbox->Text = selectedItemText;
 			std::wstring wselectedItemText = msclr::interop::marshal_as<std::wstring>(selectedItemText);
-			Download::DownloadFactory::arguments.InputHeaderFilePath = FilePathOperations::exeDir + L"\\" + wselectedItemText;
+			Download::DownloadFactory::arguments.InputHeaderFilePath = FilePathOperations::GetAbsuluteFilePath(wselectedItemText);
 		}
 	}
 	System::Void Start::headerTextbox_TextChanged(System::Object^ sender, System::EventArgs^ e)
@@ -137,7 +137,7 @@ namespace TurboDownloader {
 				}
 			}
 			std::wstring wselectedItemText = msclr::interop::marshal_as<std::wstring>(textBoxText);
-			Download::DownloadFactory::arguments.InputHeaderFilePath = FilePathOperations::exeDir + L"\\" + wselectedItemText;
+			Download::DownloadFactory::arguments.InputHeaderFilePath = FilePathOperations::GetAbsuluteFilePath(wselectedItemText);
 		}
 	}
 	System::Void Start::headerButton(System::Object^ sender, System::EventArgs^ e)
@@ -148,7 +148,7 @@ namespace TurboDownloader {
 			this->headersCombo->SelectedIndex = -1;
 			this->headerTextbox->Text = selectedFilePath;
 			std::wstring wselectedItemText = msclr::interop::marshal_as<std::wstring>(selectedFilePath);
-			Download::DownloadFactory::arguments.InputHeaderFilePath = FilePathOperations::exeDir + L"\\" + wselectedItemText;
+			Download::DownloadFactory::arguments.InputHeaderFilePath = FilePathOperations::GetAbsuluteFilePath(wselectedItemText);
 		}
 	}
 
@@ -163,7 +163,7 @@ namespace TurboDownloader {
 			String^ selectedItemText = comboBox->SelectedItem->ToString();
 			this->cookieTextbox->Text = selectedItemText;
 			std::wstring wselectedItemText = msclr::interop::marshal_as<std::wstring>(selectedItemText);
-			Download::DownloadFactory::arguments.CookieFilePath = FilePathOperations::exeDir + L"\\" + wselectedItemText;
+			Download::DownloadFactory::arguments.CookieFilePath = FilePathOperations::GetAbsuluteFilePath(wselectedItemText);
 		}
 	}
 	System::Void Start::cookieTextbox_TextChanged(System::Object^ sender, System::EventArgs^ e)
@@ -186,7 +186,7 @@ namespace TurboDownloader {
 				}
 			}
 			std::wstring wselectedItemText = msclr::interop::marshal_as<std::wstring>(textBoxText);
-			Download::DownloadFactory::arguments.CookieFilePath = FilePathOperations::exeDir + L"\\" + wselectedItemText;
+			Download::DownloadFactory::arguments.CookieFilePath = FilePathOperations::GetAbsuluteFilePath(wselectedItemText);
 		}
 	}
 	System::Void Start::cookieButton_Click(System::Object^ sender, System::EventArgs^ e)
@@ -197,7 +197,7 @@ namespace TurboDownloader {
 			this->cookieCombo->SelectedIndex = -1;
 			this->cookieTextbox->Text = selectedFilePath;
 			std::wstring wselectedItemText = msclr::interop::marshal_as<std::wstring>(selectedFilePath);
-			Download::DownloadFactory::arguments.CookieFilePath = FilePathOperations::exeDir + L"\\" + wselectedItemText;
+			Download::DownloadFactory::arguments.CookieFilePath = FilePathOperations::GetAbsuluteFilePath(wselectedItemText);
 		}
 	}
 	System::Void Start::URLTextbox_TextChanged(System::Object^ sender, System::EventArgs^ e)
